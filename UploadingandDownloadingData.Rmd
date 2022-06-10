@@ -1,6 +1,18 @@
 ---
-title: "UploadingandDowloadingData"
+title: "Uploading and Dowloading Data"
 output: html_document
 date: '2022-06-10'
+course: *Getting and Cleaning Data*
 ---
+
+**Checking for and creating a directory**
+```{r}
+file.exists("directoryName") ##checks to see if directory exists
+dir.create("directoryName")  ## creates directory if it doesn't exist
+
+## check if exists is TRUE and create if FALSE
+if(!file.exists("data")){
+      dir.create("data")
+}
+```
 
