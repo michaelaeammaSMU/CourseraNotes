@@ -5,6 +5,12 @@ date: '2022-06-10'
 course: *Getting and Cleaning Data*
 ---
 
+**Get and set directory**
+```{r}
+getwd() ## prints current directory
+setwd("directory") ## set working directory
+```
+
 **Checking for and creating a directory**
 ```{r}
 file.exists("directoryName") ##checks to see if directory exists
@@ -14,5 +20,48 @@ dir.create("directoryName")  ## creates directory if it doesn't exist
 if(!file.exists("data")){
       dir.create("data")
 }
+```
+
+**Displaying Metadata**
+```{r}
+list.files("directory") ## prints all file names in a directory
+```
+
+**Reading Data**
+*CSV files*
+```{r}
+CSV <- read.csv("file name") ## reads a CSV
+```
+
+*tables*
+```{r}
+table <- read.table("directory", sep =, quote =, na.strings=, nrows =, skip = )
+      # directory, separator, are there quotations?, missing values, lines to read, lines to skip
+```
+
+*Excel files*
+```{r}
+library(xlsx)
+read.xlsx("directory", sheetIndex =, colIndex =)
+write.xlsx() ## write out an Excel file
+```
+
+*XML files*
+```{r}
+<section> ## start section
+<\section> ## end section
+<line-break\> ## blank line
+```
+
+*JSON files*
+```{r}
+
+```
+
+**Downloading data from the internet**
+```{r}
+fileUrl <- "website.com"
+download.file(url = fileUrl, destfile = "directory", method = "curl")
+      ## method = curl using Mac
 ```
 
